@@ -44,6 +44,7 @@ gem 'omniauth'
 
 
 gem 'simplecov'
+gem 'coveralls', require: false
 
   #for Console
 gem 'hirb'

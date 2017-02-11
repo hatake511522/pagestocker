@@ -1,0 +1,18 @@
+.container-fluid
+  .row.text-center
+    .newuser
+      %h1 New User Registration
+      = form_for @user, url: signup_path do |f|
+        = f.label :name,class: "newuser_form"
+        = f.text_field :name, required: true, class: "form-controll"
+        %br/
+        = f.label :email,class: "newuser_form"
+        = f.email_field :email, required: true, class: "form-controll"
+        %br/
+        = f.label :password,class: "newuser_form"
+        = f.password_field :password, required: true, class: "form-controll"
+        %br/
+        = f.label :password_confirmation,class: "newuser_form"
+        = f.password_field :password_confirmation, required: true, class: "form-controll"
+        %br/
+        = f.submit "Sign Up!",class: "btn btn-primary"
